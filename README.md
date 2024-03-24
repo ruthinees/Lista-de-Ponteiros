@@ -1,2 +1,2 @@
 # Lista-de-Ponteiros
-Resolução da lista de ponteiros em C++
+O presente repositório possui os códigos da resolução da lista de ponteiros em C++.
