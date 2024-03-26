@@ -1,0 +1,15 @@
+#Sabendo que : int i, j, *p, *q.
+
+*q = &j
+#essa expressão está incorreta pois *q deveria receber um conteúdo inteiro, por ser um ponteiro para um inteiro e i ser um inteiro
+#entretante, nessa expressão *q está recebendo o endereço de &j, que no caso não é um inteiro, ou seja, a expressão está incorreta.
+
+i = (*&)j;
+#essa expressão está incorreta pois, pela ordem de precedência, os parentêses seriam lidos primeiro
+#logo, *& seria computado primeiro no computador
+#entretanto, esses dois operadores só funcionam se uma variável vier depois deles
+#por isso, essa expressão não funciona pois está sintaticamente incorreta.
+
+q = *p;
+#essa expressão está incorreta pois q é um ponteiro para um inteiro, logo ele deveria receber o endereço de um inteiro
+#na expressão acima, ele está recebendo o conteúdo de p, que no caso, seria um inteiro, o que é incompatível.
