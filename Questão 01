@@ -1,1 +1,33 @@
+#segue a expressão
+int i=3,j=5;
+int *p, *q;
+p = &i;
+q = &j;
 
+#determinando os valores das seguintes expressões e justificando-as:
+
+p == &i 
+#o valor é True pois o operador "&" devolve o endereço da variável i
+#logo, seu valor será igual ao da variável i.
+
+*p - *q
+#o valor da expressão é -2 pois o operador "*" recupera o conteúdo do endereço
+#armazenado no ponteiro, ou seja, o endereço armazenado em p é o de i
+#e o endereço armazenado em q é o de j, logo, como os conteúdos desses
+#endereços são i = 3 e j = 5, 3-5 = -2. 
+
+**&p
+#o operador "&" me devolve o endereço do ponteiro p
+#em seguida, o operador "*" me devolve o conteúdo do endereço de p, como ponteiros
+#guardam endereços, então *&p me devolve o endereço de i
+#com mais um operador "*", é pedido então o conteúdo do endereço guardado por p
+#logo, como p guarda o endereço de i, **&p me devolve 3.
+
+3 - *p/(*q) + 7
+#pela ordem de presendencia, iniciace a operação pela divisão. 
+#os ponteiros estão antecedidos pelo operador "*", logo, o que
+#será dividido será o conteúdo presente nos endereços que eles guardam
+#que no caso, para p é 3 e para q é 5. 3/5 = 0.6
+#entretando, como são ponteiros para inteiros, apenas o valor inteiro permanecerá na equação
+#logo, a conta fica 3 - 0 + 7. A precedência agora é da esquerda para direita, resultando então em
+# 3 + 7 = 10. O valor que da expressão acima é 10.
