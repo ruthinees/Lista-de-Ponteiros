@@ -1,0 +1,14 @@
+#include <stdio.h>
+struct teste{
+  int x = 3;
+  char nome[] = "jose";
+};
+main(){
+  struct teste *s;
+  printf("%d", s->x);
+  printf("%s", s->name);
+}
+
+#a saída do programa acima será um erro pois não é possível inicializar membros de uma estrutura dentro da declaração da estrutura.
+#além disso, s está referenciando nome de forma errada na função printf, pois está escrito name.
+#por fim, falta um tipo de retorno para a função main.
