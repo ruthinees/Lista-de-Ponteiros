@@ -1,0 +1,21 @@
+int main(){
+  int vet[] = {4, 9, 13};
+  int i;
+  for(i=0;i<3;i++){
+  printf("%d ", *(vet+i));
+  }
+}
+
+#o código acima mostra os valores do vetor vet. Isso é indicado pois na função printf foi escrito *(vet+i), ou seja, a função deve mostrar
+#o conteúdo de vet mais o valor de incremento.
+
+int main(){
+  int vet[] = {4, 9, 13};
+  int i;
+  for(i=0;i<3;i++){
+  printf("%X ",vet+i);
+  }
+}
+
+#o código acima mostra os endereços de memória de vet. Isso é indicado pois na função printf foi escrito vet+i, ou seja, a função deve mostrar
+#o endereço de memória de cada valor de vet (pois vet está somado ao incremento).
