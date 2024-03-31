@@ -1,0 +1,10 @@
+#include <stdio.h>
+void main(){
+  int const *x = 3;
+  printf("%d", ++(*x));
+}
+
+#a saída do programa mostrará um erro pois x é dito como uma variável inteira constante, porém ela está escrita como *x, o que está incorreto pois o símbolo * é usado para
+#que ponteiros refenciem valores armazenados nos endereços de memória para os quais eles apontam.
+#nesse caso, x não é ponteiro, logo a sintaxe está incorrta e o programa dará erro. 
+#da mesma forma na função printf, x não é ponteiro e seu valor não precisa ser recuperado pelo operador *.
