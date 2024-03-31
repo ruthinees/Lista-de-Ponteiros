@@ -6,8 +6,11 @@ int main(){
   }
 }
 
-#o código acima mostra os valores do vetor vet. Isso é indicado pois na função printf foi escrito *(vet+i), ou seja, a função deve mostrar
-#o conteúdo de vet mais o valor de incremento.
+#o programa acima cria um de inteiros vetor com 3 elementos e os inicializa com os valores 4, 9 e 13.
+#depois ele cria uma variável inteira i para ser usada de incremento na função for. A cada loop da função, o i aumenta uma unidade de valor, demonstrado pela expressão i++.
+#com isso, será mostrado no terminal os valores de vet. 
+#isso é indicado pois na função printf foi escrito (*vet+i), ou seja, a função deve mostrar o valor armazenado em cada posição de vet.
+#logo, a saída será "4 9 13".
 
 int main(){
   int vet[] = {4, 9, 13};
@@ -17,5 +20,9 @@ int main(){
   }
 }
 
-#o código acima mostra os endereços de memória de vet. Isso é indicado pois na função printf foi escrito vet+i, ou seja, a função deve mostrar
-#o endereço de memória de cada valor de vet (pois vet está somado ao incremento).
+#o programa acima cria um de inteiros vetor com 3 elementos e os inicializa com os valores 4, 9 e 13.
+#depois ele cria uma variável inteira i para ser usada de incremento na função for. A cada loop da função, o i aumenta uma unidade de valor, demonstrado pela expressão i++.
+#com isso, será mostrado no terminal os endereços de memória dos valores armazenados em vet
+#isso é indicado pois na função printf foi escrito vet+i, ou seja, a função deve mostrar o endereço de memória de cada posição de vet. 
+#o endereço vai depender da máquina que estiver rodando o código.
+#aqui está um exemplo de saída "F1CE8E0 F1CE8E4 F1CE8E8", o valor está aumentando 4 unidades pois os valores armazenados em vet são inteiros (ocupam 4 bytes na memória).
