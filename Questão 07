@@ -1,0 +1,21 @@
+Sabendo que: 
+
+int mat[4], *p, x;
+
+As seguintes expressões são válidas pois:
+
+p = mat + 1;
+
+#p é um ponteiro para inteiro e mat é um array de valores inteiros. Logo, p pode amarzenar o endereço de memória de qualquer valor de mat.
+#nesse caso, p está armazenando a segunda posição de mat ou o segundo valor de mat.
+
+p = mat;
+
+#da mesma forma que a exppressão anterior, p está armazenando a primeira posição de mat ou primeiro valor de mat. Isso é possível pois p é um ponteiro para inteiro
+#e mat é um array de inteiros, logo, p pode armazenar o endereço de memória de qualquer posição de mat.
+
+x = (*mat);
+
+#x pode armazenar o valor declarado *mat pois quando se declara apenas o nome do array, ele implicitamente converte-se para um ponteiro para o primeiro elemento do array
+#ou seja, podemos armazenar o valor da primeira posição de um array em um inteiro.
+#logo x = (*mat) significa que estamos armazenando o valor (ou conteúdo) do endereço de memória da primeira posição de mat.
