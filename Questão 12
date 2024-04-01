@@ -1,0 +1,17 @@
+#sabendo que: 
+float aloha[10], coisas[10][5], *pf, value = 2.2;
+int i=3;
+
+#as seguintes expressões são válidas: 
+
+aloha[2] = value;
+coisas[4][4] = aloha[3];
+pf = aloha;
+
+#as seguintes expressões são inválidas: 
+
+scanf("%f", &aloha);
+aloha = "value";
+printf("%f", aloha);
+coisas[5] = aloha;
+pf = value;
