@@ -1,4 +1,6 @@
-/* Sabendo que x é um array de 4 elementos e o endereço de memória de x[0] é 4092 e o tipo char ocupa 1 byte, o tipo int ocupa 2 bytes, o tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Os valores de x+1, x+2 e x+3 serão:
+/* Sabendo que x é um array de 4 elementos e o endereço de memória de x[0] é 4092 e o tipo char ocupa 1 byte, 
+o tipo int ocupa 2 bytes, o tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. 
+Os valores de x+1, x+2 e x+3 serão:
   
   01 - Quando x for declarado como char: 
        x+1 = 4093, x+2 = 4094, x+3 = 4095.
@@ -60,5 +62,8 @@ int main(void){
   x4+3 = 0x7fff2ad4f3a8
 */
 
-/*Fazendo uma comparação da minha máquina com a do exercício, é possível notar que os tipos char, float e double ocupam o mesmo espaço de memória dado pelo exercício (char ocupa 1 byte, float ocupa 4 bytes e double ocupa 8 bytes na minha máquina). Já o tipo int ocupa espaço diferente ao dado no exercício (int ocupa 4 bytes na minha máquina).
+/*Fazendo uma comparação da minha máquina com a do exercício, 
+é possível notar que os tipos char, float e double ocupam o mesmo espaço de memória dado pelo exercício 
+(char ocupa 1 byte, float ocupa 4 bytes e double ocupa 8 bytes na minha máquina). 
+Já o tipo int ocupa espaço diferente ao dado no exercício (int ocupa 4 bytes na minha máquina).
 */
