@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//define um tamanho máximo para o vetor.
 #define TAMMAX 100
 
 // Função de ordenação crescente que recebe um ponteiro para um vetor e o valor do seu tamanho.
@@ -25,10 +26,17 @@ void ordenacaocrescente(float *vetor, int tamvet){
 
 int main(void){
 
-  float *n;
-  int n2;
+  float *n; //variável ponteiro para float que virá a ser o vetor.
+  int n2; //variável do tamanho do vetor.
 
-  n = malloc(TAMMAX * sizeof(float));
+  n = malloc(TAMMAX * sizeof(float)); //alocando memória para o vetor.
+
+  //Verificando se a memória foi alocada corretamente
+
+  if (n == NULL) {
+        printf("Erro ao alocar memória.\n");
+        return 1;
+  }
 
   printf("Digite quantos valores você quer ordenar de forma crescente: ");
   scanf("%d", &n2);
