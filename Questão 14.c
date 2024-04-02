@@ -1,5 +1,7 @@
 /*
-Esses ponteiros são usados para permitir que o código manipule funções de maneira dinâmica durante a execução do programa. Em essência, um ponteiro para função permite que você trate uma função como um dado, podendo passá-la como argumento para outra função, retorná-la de uma função ou armazená-la em uma estrutura de dados.
+Esses ponteiros são usados para permitir que o código manipule funções de maneira dinâmica durante a execução do programa. 
+Em essência, um ponteiro para função permite que você trate uma função como um dado, podendo passá-la como argumento para outra função, 
+retorná-la de uma função ou armazená-la em uma estrutura de dados.
 
 Utilizar ponteiros para funções é uma maneira eficiente de criar funções genéricas, podendo ser reutilizadas em diversas outras partes do programa.
 */
