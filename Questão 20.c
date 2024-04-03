@@ -26,8 +26,8 @@ int main(void) {
   scanf("%d", &nlA);
 
   //Verificando que o número de linhas de A seja positivo;
-  if(nlA < 0){
-    while (nlA < 0){
+  if(nlA <= 0){
+    while (nlA <= 0){
       printf("TAMANHO INVÁLIDO!\n");
       printf("Dite novamente: ");
       scanf("%d", &nlA);
@@ -38,8 +38,8 @@ int main(void) {
   scanf("%d", &ncA);
 
   //Verificando que o número de colunas de A seja positivo;
-  if(ncA < 0){
-    while (ncA < 0){
+  if(ncA <= 0){
+    while (ncA <= 0){
       printf("TAMANHO INVÁLIDO!\n");
       printf("Dite novamente: ");
       scanf("%d", &ncA);
@@ -50,8 +50,8 @@ int main(void) {
   scanf("%d", &ncB);
 
   //Verificando que o número de colunas de B seja positivo;
-  if(ncB < 0){
-    while (ncB < 0){
+  if(ncB <= 0){
+    while (ncB <= 0){
       printf("TAMANHO INVÁLIDO!\n");
       printf("Dite novamente: ");
       scanf("%d", &ncB);
