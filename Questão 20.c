@@ -5,11 +5,17 @@
 int **alocamatriz(int linha, int coluna){
   int **matriz = malloc(linha*sizeof(int*));
 
-  matriz[0] = malloc(linha*coluna*sizeof(int));
-
-  if (matriz == NULL || matriz[0] == NULL) {
+  if (matriz == NULL) {
       printf("Erro ao alocar memória.\n");
       exit(1);
+  }
+
+  matriz[0] = malloc(linha*coluna*sizeof(int));
+
+  if (matriz[0] == NULL) {
+        printf("Erro ao alocar memória para matriz (2ª dimensão).\n");
+        free(matriz); // Liberar memória alocada para a 1ª dimensão
+        exit(1);
   }
 
   for(int i = 1; i < linha; i++){
