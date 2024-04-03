@@ -19,8 +19,8 @@ int main(void) {
   scanf("%d", &tamanho);
 
   //Verificando que o tamanho seja positivo(tamanho>0);
-  if(tamanho < 0){
-    while (tamanho < 0){
+  if(tamanho <= 0){
+    while (tamanho <= 0){
       printf("TAMANHO INVÁLIDO!\n");
       printf("Dite novamente: ");
       scanf("%d", &tamanho);
