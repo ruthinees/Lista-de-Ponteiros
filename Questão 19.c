@@ -22,7 +22,7 @@ int main(void) {
   if(tamanho <= 0){
     while (tamanho <= 0){
       printf("TAMANHO INVÁLIDO!\n");
-      printf("Dite novamente: ");
+      printf("Digite novamente: ");
       scanf("%d", &tamanho);
     }
   }
