@@ -1,6 +1,34 @@
 #include "stdio.h"
 #include <stdlib.h>
 
+//Criação de uma função genérica para alocação de matrizes
+int **alocamatriz(int linha, int coluna){
+  int **matriz = malloc(linha*sizeof(int*));
+
+  matriz[0] = malloc(linha*coluna*sizeof(int));
+
+  if (matriz == NULL || matriz[0] == NULL) {
+      printf("Erro ao alocar memória.\n");
+      exit(1);
+  }
+
+  for(int i = 1; i < linha; i++){
+    matriz[i] = matriz[i-1] + coluna;
+  }
+
+  return matriz;
+}
+
+//Criação de uma função genérica para printar as matrize.
+void printmatriz(int **matriz, int linha, int coluna){
+  for(int i = 0; i < linha; i++){
+    for(int j = 0; j < coluna; j++){
+      printf("%d ", matriz[i][j]);
+    }
+    printf("\n");
+  }
+}
+
 //Criação da função de multiplicação de matrizes
 //Ela recebe como parãmetro 3 ponteiros para matrizes, o número de linhas e colunas de A e o número de colunas de B (leva-se em conta que o número de linhas de B é igual ao número de colunas de A).
 void multiplicacaodematrizes
@@ -21,7 +49,7 @@ int main(void) {
   int **A, **B, **C; //Declarando as matrizes
   int nlA, ncA, ncB; //Variável do tamanho.
 
-  
+
   printf("Digite o número de linhas de A: ");
   scanf("%d", &nlA);
 
@@ -57,50 +85,14 @@ int main(void) {
       scanf("%d", &ncB);
     }
   }
-  
+
   //Alocando a memória das matrizes e garantindo que não haja erro.
-  A = malloc(nlA*sizeof(int*));
-
-  A[0] = malloc(nlA *ncA * sizeof(int));
+  A = alocamatriz(nlA, ncA);
+  B = alocamatriz(ncA, ncB);
+  C = alocamatriz(nlA, ncB);
   
-  if (A == NULL || A[0] == NULL) {
-      printf("Erro ao alocar memória.\n");
-      return 1;
-  }
-
-  for(int i = 1; i < nlA; i++){
-    A[i] = A[i-1] + ncA;
-  }
-  
-
-  B = malloc(nlA*sizeof(int*));
-
-  B[0] = malloc(ncA *ncB * sizeof(int));
-
-  if (B== NULL || B[0] == NULL) {
-      printf("Erro ao alocar memória.\n");
-      return 1;
-  }
-
-  for(int i = 1; i < ncA; i++){
-    B[i] = B[i-1] + ncB;
-  }
-
-  C = malloc(nlA*sizeof(int*));
-
-  C[0] = malloc(nlA *ncB * sizeof(int));
-
-  if (C== NULL || C[0] == NULL) {
-      printf("Erro ao alocar memória.\n");
-      return 1;
-  }
-
-  for(int i = 1; i < nlA; i++){
-    C[i] = C[i-1] + ncB;
-  }
-
   //Pedidindo para o usuário os valores das matrizes A e B.
-  
+
   printf("Digite os valores da matriz A:\n");
   for(int i = 0; i < nlA; i++){
     for(int j = 0; j < ncA; j++){
@@ -122,28 +114,13 @@ int main(void) {
 
   //Mostrando as matrizes A, B e C no terminal.
   printf("\nMatriz A:\n");
-  for(int i = 0; i < nlA; i++){
-    for(int j = 0; j < ncA; j++){
-      printf("%d ", A[i][j]);
-    }
-    printf("\n");
-  }
+  printmatriz(A, nlA, ncA);
 
   printf("\nMatriz B:\n");
-  for(int i = 0; i < ncA; i++){
-    for(int j = 0; j < ncB; j++){
-      printf("%d ", B[i][j]);
-    }
-    printf("\n");
-  }
+  printmatriz(B, ncA, ncB);
 
   printf("\nMatriz C:\n");
-  for(int i = 0; i < nlA; i++){
-    for(int j = 0; j < ncB; j++){
-      printf("%d ", C[i][j]);
-    }
-    printf("\n");
-  }
+  printmatriz(C, nlA, ncB);
 
   //Liberando a memória das matrizes.
   free(A[0]);
