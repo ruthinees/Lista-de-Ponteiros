@@ -1,0 +1,13 @@
+#o código que apresenta vazamento de memória é:
+
+int f(char *data){
+  void *s;
+  s = malloc(50);
+  int size = strlen(data);
+  if (size > 50)
+  return(-1);
+  free(s);
+  return 0;
+}
+
+#pois quando entra na condição de se o tamanho (size) de data for maior que 50, a função if apenas retorna o valor -1, não tendo a liberação da memória de s para esse caso.
