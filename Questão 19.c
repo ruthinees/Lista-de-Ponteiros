@@ -1,6 +1,8 @@
 #include "stdio.h"
 #include <stdlib.h>
 
+//Criação da função de soma de vetores.
+//Ela recebe como parãmetro 3 ponteiros para vetores e o tamanho deles.
 void somadevetores(int *vetor1, int *vetor2, int *vetor3, int tamanho){
   int i;
   for(i = 0; i < tamanho; i++){
@@ -9,12 +11,23 @@ void somadevetores(int *vetor1, int *vetor2, int *vetor3, int tamanho){
 }
 
 int main(void) {
-  int *vetor1, *vetor2, *vetor3;
-  int tamanho;
+  int *vetor1, *vetor2, *vetor3; //Declarando os vetores.
+  int tamanho; //Variável do tamanho.
 
+  
   printf("Digite o tamanho dos vetores: ");
   scanf("%d", &tamanho);
-  
+
+  //Verificando que o tamanho seja positivo(tamanho>0);
+  if(tamanho < 0){
+    while (tamanho < 0){
+      printf("TAMANHO INVÁLIDO!\n");
+      printf("Dite novamente: ");
+      scanf("%d", &tamanho);
+    }
+  }
+
+  //Alocando a memória dos vetores e garantindo que não haja erro.
   vetor1 = malloc(tamanho*sizeof(int));
 
   if (vetor1 == NULL) {
@@ -46,6 +59,7 @@ int main(void) {
       scanf("%d", &vetor2[i]);
   }
 
+  //Chamando a função de soma de vetores.
   somadevetores(vetor1, vetor2, vetor3, tamanho);
 
   printf("vetor1: ");
@@ -63,6 +77,7 @@ int main(void) {
       printf("%d ", vetor3[i]);
   }
 
+  //Liberando a memória dos vetores.
   free(vetor1);
   free(vetor2);
   free(vetor3);
