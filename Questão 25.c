@@ -39,7 +39,7 @@ int ***alocamatriz(int altura, int largura, int profundidade){
   return matriz;
 }
 
-// Função genéric para liberar a memória alocada pela matriz tridimensional
+// Função genérica para liberar a memória alocada pela matriz tridimensional
 //Não precisamos dar como paramêtro a profundidade pois ela é um bloco que depende da altura e largura, sendo M[altura[largura] = profundidade.
 void liberarMatrizTridimensional(int ***matriz, int altura, int largura){
     int i, j;
@@ -92,6 +92,7 @@ void modificarElemento(int ***matriz, int alt, int larg, int prof, int coord_alt
     printf("Elemento [%d][%d][%d] modificado para %d\n", coord_alt, coord_larg, coord_prof, novo_valor);
 }
 
+//função para o preenchimento da matriz com valores dados pelo usuário
 void preenchermatriz(int ***matriz, int altura, int largura, int profundidade){
   printf("Digite os valores da matriz: \n");
 
